@@ -11,9 +11,44 @@ body {
   font-size: 18px;
 }
 
+.hero-btn .btn {
+  border: none;
+  color: white;
+  font-weight: 600;
+  margin: 20px 18px;
+  padding: 15px 35px;
+  border-radius: 25px;
+  background-color: #26baa4;
+  -webkit-box-shadow: 0px 3px 10px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 10px 5px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  -webkit-transition: .3s all ease-in-out;
+  transition: .3s all ease-in-out;
+  outline: none;
+  cursor: pointer;
+}
+
+.hero-btn .btn:hover {
+  color: #26baa4;
+  background-color: white;
+  -webkit-box-shadow: 0px 3px 35px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 35px 5px rgba(0, 0, 0, 0.2);
+}
+
+.hero-btn .blue-btn {
+  background-color: #6173ff;
+  -webkit-transition: .3s all ease-in-out;
+  transition: .3s all ease-in-out;
+}
+
+.hero-btn .blue-btn:hover {
+  color: #6173ff;
+  background-color: white;
+}
+
 .hero-main {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -142,8 +177,9 @@ body {
 }
 
 .hero-one .hero-one-comp-val h3 {
-  margin-top: 8%;
+  margin-top: 5%;
   padding-left: 10%;
+  margin-bottom: 20px;
 }
 
 .hero-one .hero-one-comp-val p {
@@ -155,7 +191,7 @@ body {
 
 .hero-two {
   position: relative;
-  top: 10vh;
+  margin-top: 10%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -186,7 +222,6 @@ body {
 }
 
 .hero-two img {
-  margin: 30px 0;
   position: relative;
   width: 70%;
 }
@@ -198,7 +233,7 @@ body {
 }
 
 .workflow h2 {
-  margin: 20px;
+  margin-bottom: 20px;
 }
 
 .workflow p {
@@ -206,33 +241,71 @@ body {
 }
 
 .workflow .tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+.workflow .tools .tools-detail {
+  width: 25%;
+}
+
+.workflow .tools .tools-detail img {
+  height: 35px;
+  margin: 20px;
+}
+
+.workflow .tools .tools-detail h3 {
+  margin-bottom: 20px;
+}
+
+.workflow .tools .tools-detail p {
+  line-height: 150%;
+  opacity: 0.5;
+}
+
+.customers {
   position: relative;
-  width: 80%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  margin: 5% 0;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.workflow .tools-detail img {
-  margin: 20px;
+.ios-mac {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
 }
 
-.workflow .tools-detail h3 {
+.ios-mac h2 {
   margin-bottom: 20px;
 }
 
-.workflow .tools-detail p {
+.ios-mac p {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 50%;
   line-height: 150%;
   opacity: 0.5;
+  margin-bottom: 20px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
   .hero-main img {
     margin-top: 10%;
     margin-bottom: 10%;
@@ -296,8 +369,35 @@ body {
     width: 80%;
     height: auto;
   }
-  .workflow {
-    margin-top: 25%;
+  .workflow .tools {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .workflow .tools .tools-detail {
+    width: 80%;
+  }
+  .customers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .customers img {
+    padding: 50px;
+  }
+  .ios-mac {
+    width: 80%;
+  }
+  .ios-mac p {
+    width: 80%;
   }
 }
 /*# sourceMappingURL=style.css.map */
